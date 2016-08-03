@@ -1,0 +1,145 @@
+/* COLORS */
+$color-red: crimson;
+$color-blue: slateblue;
+
+/* IMAGES */
+$bg-img: 'http://www.bet.com/topics/k/kanye-west/_jcr_content/image.heroimage.dimg/__1410483944165/2011-topic-music-kanye-west-1.jpg';
+
+body {
+  width:100vw;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: dotted #ccc 0.1em;
+  padding: 1em 0;
+}
+
+header {
+  padding:2em;
+}
+
+form {
+  padding-left:2em;
+}
+
+button, input[type="submit"] {
+  border-radius: 5px;
+  border: 0;
+  background-color: $color-blue;
+  padding:1em 2em;
+  color:white;
+  cursor: pointer;
+  display:inline-block;
+  margin: 1em 0;
+  &:hover {
+    background-color: $color-red;
+  }
+}
+
+input[type="submit"] {
+  background-color: black;
+}
+
+input, textarea {
+  padding:1em;
+  margin:0.5em 0;
+  border-color: #ccc;
+  &[placeholder] {
+    font-style: italic;
+  }
+}
+
+blockquote {
+  margin: 1em 0 0.5em 0;
+  clear:both;
+}
+
+cite {
+  display: block;
+  text-align: right;
+}
+
+#feed {
+  position:absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: auto;
+}
+
+#feed-tab {
+  background-color: black;
+  width:40px;
+  height:120px;
+  text-align: center;
+  position:relative;
+  top:40px;
+  left:0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color:white;
+  cursor: pointer;
+  animation: grow 1s infinite;
+  overflow:hidden;
+  & p {
+    transform:rotate(90deg);
+    padding-left:1.8em;
+  }
+}
+
+.show {
+  width: 30%;
+  padding:0 40px;
+  border-left: solid 0.5em black;
+}
+
+.stick {
+  margin-left: -40px;
+}
+
+#feed-tab.stick.stick-out{
+  margin-left:-80px;
+  animation:none;
+}
+
+#approval {
+  width: 100%;
+  padding:0.5em 0;
+  & img {
+    float: right;
+    margin-right: 10em;
+    max-width:30%;
+    padding-left:2em;
+  }
+
+  & h1, h2 {
+    width:80%;
+    padding-left:2em;
+  }
+}
+
+#container {
+  position:fixed;
+  top:0;
+  left:0;
+  background-image: url($bg-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes grow {
+  0% { width: 40px; }
+  50% { width: 50px; }
+  100% { width: 40px; }
+}
